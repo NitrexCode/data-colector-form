@@ -3,9 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 import { RootState } from '../../redux/store'
-import updateForm from '../../redux/formSlice'
-import { FormFields } from '../'
-import { Button } from '../'
+import { updateForm } from '../../redux/formSlice'
+import { FormFields, Button } from '../'
 
 const Form: React.FC = () => {
   const formData = useSelector((state: RootState) => state.form)
@@ -29,7 +28,7 @@ const Form: React.FC = () => {
     link.download = 'formData.json'
     link.click()
 
-    navigate('/thanks') // Redirect to Thank You page
+    navigate('/thanks')
   }
 
   return (
