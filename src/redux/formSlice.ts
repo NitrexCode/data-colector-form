@@ -1,8 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-import { FormData } from '../types/types'
+import { FormDataProps } from '../types/types'
 
-const initialState: FormData = {
+const initialState: FormDataProps = {
   name: '',
   email: '',
   message: '',
@@ -10,12 +10,13 @@ const initialState: FormData = {
 
 const formSlice = createSlice({
   name: 'form',
-  initialState: initialState,
+  initialState,
   reducers: {
-    updateForm: (state, action) => {
+    updateForm: (state, action: PayloadAction<Partial<FormDataProps>>) => {
       return { ...state, ...action.payload }
     },
   },
 })
 
+export const { updateForm } = formSlice.actions
 export default formSlice.reducer
