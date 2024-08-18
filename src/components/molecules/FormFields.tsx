@@ -1,7 +1,6 @@
 import React from 'react'
 
-import InputField from '../atoms/InputField'
-import TextAreaField from '../atoms/TextAreaField'
+import { InputField, TextAreaField } from '../atoms'
 
 interface FormFieldsProps {
   formData: {
