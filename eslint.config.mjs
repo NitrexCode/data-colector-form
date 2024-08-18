@@ -13,7 +13,13 @@ export default [
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
       globals: {
+        React: 'readonly',
         document: 'readonly',
         window: 'readonly',
         HTMLElement: 'readonly',
@@ -51,6 +57,7 @@ export default [
       'jsx-a11y/anchor-is-valid': 'off',
       quotes: ['error', 'single', { avoidEscape: true }],
       semi: ['error', 'never'],
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     },
     settings: {
       react: {
@@ -82,6 +89,7 @@ export default [
       ],
       quotes: ['error', 'single', { avoidEscape: true }],
       semi: ['error', 'never'],
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     },
   },
   prettierConfig,
