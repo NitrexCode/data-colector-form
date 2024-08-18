@@ -1,9 +1,8 @@
-// src/App.tsx
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import HomePage from './components/pages/HomePage'
-import ThanksPage from './components/pages/ThanksPage'
+import HomePage from './pages/HomePage'
+import ThanksPage from './pages/ThanksPage'
 
 const App: React.FC = () => {
   return (
