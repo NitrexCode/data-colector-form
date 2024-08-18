@@ -8,14 +8,14 @@ export interface TextAreaFieldProps {
   label: string
   name: string
   value: string
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onChange?: (_e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export interface InputFieldProps {
   label: string
   name: string
   value: string
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onChange?: (_e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export interface ButtonProps {
@@ -26,5 +26,5 @@ export interface ButtonProps {
 
 export interface FormFieldsProps {
   formData: FormDataProps
-  handleChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  handleChange?: (_e: React.ChangeEvent<HTMLInputElement>) => void
 }
