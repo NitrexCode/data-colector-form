@@ -1,15 +1,7 @@
 import React from 'react'
 
 import { InputField, TextAreaField } from '../atoms'
-
-interface FormFieldsProps {
-  formData: {
-    name: string
-    email: string
-    message: string
-  }
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
+import { FormFieldsProps } from '../../types/types'
 
 const FormFields: React.FC<FormFieldsProps> = ({ formData, handleChange }) => {
   return (

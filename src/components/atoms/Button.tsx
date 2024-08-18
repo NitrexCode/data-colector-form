@@ -1,11 +1,7 @@
 import React from 'react'
 import { Button as MUIButton } from '@mui/material'
 
-interface ButtonProps {
-  text: string
-  onClick?: () => void
-  type?: 'button' | 'submit'
-}
+import { ButtonProps } from '../../types/types'
 
 const Button: React.FC<ButtonProps> = ({ text, onClick, type = 'button' }) => {
   return (

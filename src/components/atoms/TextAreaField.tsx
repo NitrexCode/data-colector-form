@@ -1,12 +1,7 @@
 import React from 'react'
 import { TextField } from '@mui/material'
 
-interface TextAreaFieldProps {
-  label: string
-  name: string
-  value: string
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
+import { TextAreaFieldProps } from '../../types/types'
 
 const TextAreaField: React.FC<TextAreaFieldProps> = ({
   label,
