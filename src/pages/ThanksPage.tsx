@@ -11,7 +11,20 @@ const ThanksPage: React.FC = () => {
   }
 
   return (
-    <Container maxWidth="lg" className="page_container" disableGutters>
+    <Container
+      maxWidth="lg"
+      className="page_container"
+      disableGutters
+      sx={{
+        maxWidth: {
+          xs: '100%',
+          sm: '70%',
+          md: '60%',
+        },
+        marginRight: 'auto',
+        marginLeft: 'auto',
+      }}
+    >
       <Grid container spacing={2} position={'relative'}>
         <Grid item xs={12} md={6}>
           <Box
