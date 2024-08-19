@@ -11,7 +11,9 @@ const Form: React.FC = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     dispatch(updateForm({ [e.target.name]: e.target.value }))
   }
 
