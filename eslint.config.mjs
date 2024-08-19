@@ -24,6 +24,7 @@ export default [
         window: 'readonly',
         HTMLElement: 'readonly',
         HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
         localStorage: 'readonly',
         Blob: 'readonly',
         URL: 'readonly',
