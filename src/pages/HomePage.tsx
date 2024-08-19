@@ -1,15 +1,30 @@
 import React from 'react'
-import { Container, Typography } from '@mui/material'
+import { Container, Typography, Grid, Box } from '@mui/material'
 
 import { Form } from '../components'
 
 const HomePage: React.FC = () => {
   return (
-    <Container maxWidth="sm">
-      <Typography variant="h4" component="h1" gutterBottom>
-        Contact Us
-      </Typography>
-      <Form />
+    <Container maxWidth="lg" className="page_container" disableGutters>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            height="100%"
+            className="bg-image homepage"
+          ></Box>
+        </Grid>
+        <Grid item xs={12} md={6} alignContent={'center'}>
+          <Box p={2}>
+            <Typography variant="h4" component="h1" gutterBottom>
+              Add to storage
+            </Typography>
+            <Form />
+          </Box>
+        </Grid>
+      </Grid>
     </Container>
   )
 }
