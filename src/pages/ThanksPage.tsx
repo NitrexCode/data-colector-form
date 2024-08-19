@@ -2,8 +2,13 @@ import React from 'react'
 import { Container, Typography, Grid, Box, Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import './Pages.css'
+import { useSelector } from 'react-redux'
+
+import { RootState } from '../redux/store'
 
 const ThanksPage: React.FC = () => {
+  const formData = useSelector((state: RootState) => state.form)
+
   const navigate = useNavigate()
 
   const handleBackToHome = () => {
@@ -39,11 +44,11 @@ const ThanksPage: React.FC = () => {
         <Grid item xs={12} md={6} alignContent={'center'}>
           <Box p={2}>
             <Typography variant="h4" component="h1" gutterBottom>
-              Thank You!
+              Thank You! {formData.name}
             </Typography>
             <Typography variant="body1" gutterBottom>
-              Your message has been successfully submitted. We will get back to
-              you shortly.
+              Your message has been successfully submitted and your json file is
+              exported
             </Typography>
             <Button
               variant="contained"
