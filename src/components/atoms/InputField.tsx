@@ -8,6 +8,12 @@ const InputField: React.FC<InputFieldProps> = ({
   name,
   value,
   onChange,
+  onBlur,
+  error,
+  helperText,
+  fullWidth,
+  margin,
+  required,
 }) => {
   return (
     <TextField
@@ -16,8 +22,12 @@ const InputField: React.FC<InputFieldProps> = ({
       name={name}
       value={value}
       onChange={onChange}
-      fullWidth
-      margin="normal"
+      onBlur={onBlur}
+      error={error}
+      helperText={helperText}
+      fullWidth={fullWidth}
+      margin={margin}
+      required={required}
     />
   )
 }

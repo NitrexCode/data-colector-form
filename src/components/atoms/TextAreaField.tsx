@@ -8,6 +8,14 @@ const TextAreaField: React.FC<TextAreaFieldProps> = ({
   name,
   value,
   onChange,
+  onBlur,
+  error,
+  helperText,
+  multiline = true,
+  rows = 4,
+  fullWidth,
+  margin,
+  required,
 }) => {
   return (
     <TextField
@@ -16,10 +24,14 @@ const TextAreaField: React.FC<TextAreaFieldProps> = ({
       name={name}
       value={value}
       onChange={onChange}
-      fullWidth
-      margin="normal"
-      multiline
-      rows={4}
+      onBlur={onBlur}
+      error={error}
+      helperText={helperText}
+      multiline={multiline}
+      rows={rows}
+      fullWidth={fullWidth}
+      margin={margin}
+      required={required}
     />
   )
 }
