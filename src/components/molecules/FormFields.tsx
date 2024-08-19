@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { TextField } from '@mui/material'
 
 import { FormFieldsProps } from '../../types/types'
+import { InputField, TextAreaField } from '../atoms'
 
 const FormFields: React.FC<FormFieldsProps> = ({ formData, handleChange }) => {
   const [errors, setErrors] = useState({
@@ -52,7 +52,7 @@ const FormFields: React.FC<FormFieldsProps> = ({ formData, handleChange }) => {
 
   return (
     <>
-      <TextField
+      <InputField
         label="Name"
         name="name"
         value={formData.name}
@@ -64,7 +64,7 @@ const FormFields: React.FC<FormFieldsProps> = ({ formData, handleChange }) => {
         margin="normal"
         required
       />
-      <TextField
+      <InputField
         label="Email"
         name="email"
         value={formData.email}
@@ -76,7 +76,7 @@ const FormFields: React.FC<FormFieldsProps> = ({ formData, handleChange }) => {
         margin="normal"
         required
       />
-      <TextField
+      <TextAreaField
         label="Message"
         name="message"
         value={formData.message}
