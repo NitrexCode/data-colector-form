@@ -23,6 +23,7 @@ const ThanksPage: React.FC = () => {
         },
         marginRight: 'auto',
         marginLeft: 'auto',
+        boxShadow: 3,
       }}
     >
       <Grid container spacing={2} position={'relative'}>
